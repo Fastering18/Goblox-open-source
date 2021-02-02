@@ -103,7 +103,7 @@ client.on("message", async message => {
    if (message.content.startWithPrefix(prefix) <= -1) return;
    
    const args = message.content
-        .slice(prefix.length)
+        .slice(prefix[0].length)
         .trim()
         .split(/ +/g);
     const command = args.shift().toLowerCase();
